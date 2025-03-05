@@ -4,7 +4,7 @@ const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 const demo = document.getElementById("demo");
 
-const targetDate = new Date('2024-12-08T18:00:00+01:00');
+const targetDate = new Date('2025-03-6T19:41:00+01:00');
 const updateCountdown = () => {
     const currentTime = new Date ();
     let timeLeft = targetDate - currentTime;
@@ -20,7 +20,7 @@ const updateCountdown = () => {
     // This checks if the timeLeft is less than or equal to zero
     if (timeLeft <= 0) {
         clearInterval(intervalId);
-        demo.textContent = "Countdown End!";
+        demo.textContent = "WELCOME!";
         day.textContent = '0';
         hours.textContent = '00';
         minutes.textContent = '00';

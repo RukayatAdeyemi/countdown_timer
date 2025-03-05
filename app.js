@@ -13,12 +13,17 @@ const updateCountdown = () => {
     let minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     let secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
     day.textContent = days;
-    hours.textContent = hoursLeft.toString().padStart(2, '0');;
-    minutes.textContent = minutesLeft.toString().padStart(2, '0');;
-    seconds.textContent = secondsLeft.toString().padStart(2, '0');;
+    hours.textContent = hoursLeft.toString().padStart(2, '0');
+    minutes.textContent = minutesLeft.toString().padStart(2, '0');
+    seconds.textContent = secondsLeft.toString().padStart(2, '0');
     if (timeLeft <= 0) {
         clearInterval(intervalId);
         demo.textContent = "Countdown End!";
+        day.textContent = "0";
+        hours.textContent = "00";
+        minutes.textContent = "00";
+        seconds.textContent = "00";
+        return;
     }
 }
 const intervalId = setInterval(updateCountdown, 1000);
